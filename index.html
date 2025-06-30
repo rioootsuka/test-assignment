@@ -8,61 +8,17 @@
 </head>
 
 <body>
-  <p>よろしくな！</p>
-  <button>OK</button>
+  <label for="countInput">配列の長さ</label>
+  <input type="number" id="countInput">
+
+  <label for="multiplyInput">掛ける数</label>
+  <input type="number" id="multiplyInput">
+
+  <button id="pushButton">実行</button>
+
+  <div id="result"></div>
+
   <script src="main.js"></script>
 </body>
-<script>
-  // 0~99の整数がランダムで含まれる配列の作成
-  function createRandomArray(count) {
-    const kara = [];
-    for (var i = 0; i < count; i++) {
-      const randomNumber = Math.floor(Math.random() * 100);
-      kara.push(randomNumber);
-    }
-    return kara
-  }
-  // ランダムな整数の作成
-  const randomLenght = Math.floor(Math.random() * 10) + 1;
-  const randomArray = createRandomArray(randomLenght);
-
-  console.log('①ランダムな整数分の配列:', randomArray);
-
-  //============================================================
-  // つまづいたところ
-  // ①空配列を渡す意味
-  // ②returnの意味、場所
-
-  // 解決方法
-  // chatGPTにコードレビューしてもらう
-  // →答えは教えてもらわないでヒントだけもらう
-  //============================================================
-
-  //指定された配列の中身を指定の数字で掛ける
-  function multiplyArray(array, num) {
-    return array.map(item => item * num)
-  }
-
-  const array = createRandomArray(10);
-  const num = Math.floor(Math.random() * 10) + 1;
-  const multip = multiplyArray(array, num);
-
-  console.log('②ランダムな配列:', array);
-  console.log('③掛ける数字:', num);
-  console.log('④掛けた答え:', multip);
-
-  //============================================================
-  // つまづいたところ
-  // ①.map
-  //============================================================
-
-  // 10個のランダムな整数を作成し、その配列を５倍にする
-  // var array = createRandomArray(10); 
-  // multiplyArray(array, 5);           
-
-  // for(var i = 0; i < array.length; i++){
-  //     console.log(array[i]);
-  // }
-</script>
 
 </html>
